@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ASN Survey</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>Association Sans Nom</h1>
+        <h4>Association pour la Sécurité et le Libre à 42</h4>
+    {{^user}}
+        <p>
+            <a href="/">Home</a> |
+            <a href="/login">Log In</a>
+        </p>
+    {{/user}}
+    {{#user}}
+        <p>
+            <a href="/">Home</a> |
+            <a href="/survey">Survey</a> |
+            <a href="/results">Results</a> |
+            <a href="/logout">Log Out</a>
+        </p>
+    {{/user}}
+    {{{ body }}}
+    <script type="text/javascript" src="/js/main.js"></script>
+    </body>
+</html>

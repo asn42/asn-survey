@@ -1,0 +1,7 @@
+{{^user}}
+    <p>Bonjour&nbsp;! <a href="/login">Identifie-toi</a>.</p>
+{{/user}}
+{{#user}}
+    <p>Salut, {{ displayName }}. Remplis <a href="/survey">le questionnaire</a>
+    ou regarde <a href="/results">les réponses</a>.</p>
+{{/user}}

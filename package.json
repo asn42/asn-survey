@@ -1,0 +1,21 @@
+{
+  "name": "passport-42-examples-login",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "1.15.x",
+    "connect-ensure-login": "0.1.x",
+    "cookie-parser": "1.4.x",
+    "debug": "2.2.x",
+    "express": "4.14.x",
+    "express-session": "1.14.x",
+    "hbs": "4.0.x",
+    "morgan": "1.7.x",
+    "passport": "0.3.x",
+    "passport-42": "1.x",
+    "sqlite3": "^3.1.8"
+  }
+}

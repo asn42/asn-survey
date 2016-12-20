@@ -1,0 +1,49 @@
+<h3>Implication</h3>
+<ul>
+    <li>être informé des activités: {{ result.implication_follow }}</li>
+    <li>participer aux évènements: {{ result.implication_attend }}</li>
+    <li>encadrer des activités: {{ result.implication_facilitate }}</li>
+    <li>gérer l'association: {{ result.implication_organize }}</li>
+</ul>
+
+<h3>Intérêts</h3>
+<ul>
+    <li>le hacking/cracking de systèmes: {{ result.interest_hacking }}</li>
+    <li>protéger ma vie privée: {{ result.interest_privacy }}</li>
+    <li>le logiciel Libre et Open Source: {{ result.interest_floss }}</li>
+</ul>
+
+<h3>Contribution</h3>
+<ul>
+    <li>idée pas finalisée: {{ result.contribution_activity }}</li>
+    <li>activité à peu près réalisable: {{ result.contribution_propose }}</li>
+    <li>voudrais apprendre sur un sujet précis: {{ result.contribution_ask }}</li>
+    <li>peut aider: {{ result.contribution_help }}</li>
+</ul>
+<h2>Détail</h2>
+{{#full}}
+<h3>{{ username }}</h3>
+<ul>
+    <li>être informé des activités: {{ implication_follow }}</li>
+    <li>participer aux évènements: {{ implication_attend }}</li>
+    <li>encadrer des activités: {{ implication_facilitate }}</li>
+    <li>gérer l'association: {{ implication_organize }}</li>
+</ul>
+
+<h4>Intérêts</h4>
+<ul>
+    <li>le hacking/cracking de systèmes: {{ interest_hacking }}</li>
+    <li>protéger ma vie privée: {{ interest_privacy }}</li>
+    <li>le logiciel Libre et Open Source: {{ interest_floss }}</li>
+</ul>
+
+<h4>Contribution</h4>
+<ul>
+    <li>idée pas finalisée: {{ contribution_activity }}</li>
+    <li>activité à peu près réalisable: {{ contribution_propose }}</li>
+    <li>voudrais apprendre sur un sujet précis: {{ contribution_ask }}</li>
+    <li>peut aider: {{ contribution_help }}</li>
+</ul>
+<p>{{other}}</p>
+<hr>
+{{/full}}

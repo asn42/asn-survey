@@ -1,0 +1,63 @@
+<form id="survey" method="post" action="/survey">
+<p>L'Association Sans Nom va faciliter le partage des connaissances et
+compétences dans les domaines du Logiciel Libre et de la sécurité. L'idée est
+d'organiser des petits ateliers pratiques, accessibles au plus grand nombre (ou
+de niveau plus élevé s'il y a une demande) et de faciliter la participation à
+des évènements. D'autres types d'activités sont évidemment possibles.</p>
+<p>Merci de cliquer les différentes images qui correspondent à votre cas. Vous
+pouvez ajouter tout ce que vous pensez être pertinent dans le champs de texte à
+la fin.</p>
+<h2>Implication</h2>
+<p>
+Je veux…<br>
+<input type="checkbox" name="implication" value="follow" id="follow" {{#result.implication_follow}}checked="checked"{{/result.implication_follow}}><label for="follow">
+    <img src="img/enveloppe.svg" alt="Follow"><br>être informé des activités
+</label>
+<input type="checkbox" name="implication" value="attend" id="attend" {{#result.implication_attend}}checked="checked"{{/result.implication_attend}}><label for="attend">
+    <img src="img/silhouette.svg" alt="Attend"><br>participer aux évènements
+</label>
+<input type="checkbox" name="implication" value="facilitate" id="facilitate" {{#result.implication_facilitate}}checked="checked"{{/result.implication_facilitate}}><label for="facilitate">
+    <img src="img/ampoule.svg" alt="Facilitate"><br>encadrer des activités
+</label>
+<input type="checkbox" name="implication" value="organize" id="organize" {{#result.implication_organize}}checked="checked"{{/result.implication_organize}}><label for="organize">
+    <img src="img/engrenages.svg" alt="Organize"><br>gérer l'association
+</label>
+</p>
+
+<h2>Intérêts</h2>
+<p>
+Ce qui m'intéresse, c'est…<br>
+<input type="checkbox" name="interest" value="hacking" id="hacking" {{#result.interest_hacking}}checked="checked"{{/result.interest_hacking}}><label for="hacking">
+    <img src="img/lockpicking.svg" alt="(Cr|H)acking"><br>le hacking/cracking de systèmes
+</label>
+<input type="checkbox" name="interest" value="privacy" id="privacy" {{#result.interest_privacy}}checked="checked"{{/result.interest_privacy}}><label for="privacy">
+    <img src="img/guyfawkesmask.svg" alt="Privacy"><br>protéger ma vie privée
+</label>
+<input type="checkbox" name="interest" value="floss" id="floss" {{#result.interest_floss}}checked="checked"{{/result.interest_floss}}><label for="floss">
+    <img src="img/opensource.svg" alt="FLOSS"><br>le logiciel Libre et Open Source
+</label>
+</p>
+
+<h2>Contribution</h2>
+<p>
+<input type="checkbox" name="contribution" value="activity" id="activity" {{#result.contribution_activity}}checked="checked"{{/result.contribution_activity}}><label for="activity">
+    <img src="img/brain.svg" alt="Activity"><br>J'ai déjà une idée pas finalisée
+</label>
+<input type="checkbox" name="contribution" value="propose" id="propose" {{#result.contribution_propose}}checked="checked"{{/result.contribution_propose}}><label for="propose">
+    <img src="img/magician.svg" alt="Propose"><br>J'ai une activité à peu près réalisable
+</label>
+<input type="checkbox" name="contribution" value="ask" id="ask" {{#result.contribution_ask}}checked="checked"{{/result.contribution_ask}}><label for="ask">
+    <img src="img/hands.svg" alt="Ask"><br>Je voudrais apprendre sur un sujet précis
+</label>
+<input type="checkbox" name="contribution" value="help" id="help" {{#result.contribution_help}}checked="checked"{{/result.contribution_help}}><label for="help">
+    <img src="img/chemicalreaction.svg" alt="Help"><br>Je peux aider pour les activités des autres
+</label>
+</p>
+
+<h2>Des précisions&nbsp;? Autre chose&nbsp;?</h2>
+<p>Précisez les idées, projets, demandes, etc. auxquels vous pensiez en
+sélectionnant des choses ci-dessus. C'est aussi ici pour les remarques,
+les suggestions et autre.</p>
+<p><textarea name="other">{{result.other}}</textarea></p>
+<p><input type="submit" value="Enregistrer !!">
+</form>
