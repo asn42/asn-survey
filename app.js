@@ -139,6 +139,31 @@ app.get('/results',
     });
   });
 
+app.get('/mails',
+  ensureLoggedIn(),
+  function (req, res, next){
+    if (req.user.username !== 'apachkof') {
+      res.redirect('/survey');
+    } else {
+      var db = new sqlite3.Database(path.join(__dirname, 'db.sqlite'));
+      db.serialize(function () {
+        createDatabase(db);
+        db.all('SELECT username FROM survey;', function (dbErr, full) {
+          if (dbErr) {
+            db.close();
+            next(dbErr);
+          }
+          if (full) {
+            db.close();
+            res.render('mails', {
+              user: req.user, full: full
+            });
+          }
+        });
+      });
+    }
+  });
+
 app.get('/all_results',
   ensureLoggedIn(),
   function (req, res, next){
