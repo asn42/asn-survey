@@ -47,3 +47,7 @@ a {
     animation:spin 1s steps(12, end) infinite;
 }
 @keyframes spin { 100% { transform:rotate(360deg); } }
+
+p {
+    overflow: auto;
+}
